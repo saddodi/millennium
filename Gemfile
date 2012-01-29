@@ -4,6 +4,7 @@ gem 'rails', '3.1.0'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
+gem 'sprockets', "~> 2.0.0"
 
 gem 'mysql2'
 
@@ -22,7 +23,7 @@ gem 'jquery-rails'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+ gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
@@ -31,3 +32,4 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+gem 'activeadmin'
