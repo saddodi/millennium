@@ -29,7 +29,6 @@ set :rvm_type, :user  # Copy the exact line. I really mean :user here
 
 # 
 
-load "deploy/assets"
 before "deploy:assets:precompile", "deploy:link_db"
 
 
