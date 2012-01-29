@@ -29,9 +29,6 @@ set :rvm_type, :user  # Copy the exact line. I really mean :user here
 
 # 
 
-before "deploy:assets:precompile", "deploy:link_db"
-
-
 
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
