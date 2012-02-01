@@ -6,9 +6,20 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+	<div id="header">
+		<%= link_to image_tag("logo.png", :border => 0, :class => "logo"), root_path %>
+	</div>
+	
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+	<div id="primary">
+		<ul class="navigation">
+		    <li> test
+			</li>
+		</ul>
+	</div>
 <%= yield %>
 
 </body>
