@@ -29,15 +29,26 @@ set :rvm_type, :user  # Copy the exact line. I really mean :user here
 
 # 
 
-before "deploy", "deploy:link_db"
+after :deploy, "deploy:link_db"
+
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
 
+# namespace :assets do
+#   task :precompile, :roles => :web do
+#     run "cd #{current_path} && RAILS_ENV=production bundle exec rake assets:precompile"
+#   end
+#   task :cleanup, :roles => :web do
+#     run "cd #{current_path} && RAILS_ENV=production bundle exec rake assets:clean"
+#   end
+#   
+# end
+# 
+# after :deploy, "assets:precompile"
+
+
 # If you are using Passenger mod_rails uncomment this:
  namespace :deploy do
-   task :link_db do
-     run "ln -s #{shared_path}/config/database.yml #{latest_release}/config/database.yml"
-   end
    task :start do ; end
    task :stop do ; end
    task :restart, :roles => :app, :except => { :no_release => true } do
