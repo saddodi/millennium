@@ -49,6 +49,9 @@ after :deploy, "assets:precompile"
 
 # If you are using Passenger mod_rails uncomment this:
  namespace :deploy do
+   task :link_db do
+     run "ln -s #{shared_path}/config/database.yml #{latest_release}/config/database.yml"
+   end
    task :start do ; end
    task :stop do ; end
    task :restart, :roles => :app, :except => { :no_release => true } do
