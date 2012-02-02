@@ -1,5 +1,5 @@
 body { 
-  font-size: 12px;
+  font-size: 15px;
 }
  
 .container{text-align:left;position:relative;padding:0;margin:0 auto;width:800px}
@@ -19,7 +19,7 @@ body {
 /* For home layout
 -------------------------------------------------------------- */
 .bg{
-  background: url("../images/page-top.jpg") repeat-x scroll 0 0%, url("../images/page.jpg") repeat scroll 0 0 #EAEBED;
+  background: url("assets/page-top.jpg") repeat-x scroll 0 0%, url("../images/page.jpg") repeat scroll 0 0 #EAEBED;
   height: 500px;
   -moz-box-shadow:     0 0 2px #bbb;
   -webkit-box-shadow:  0 0 2px #bbb;
@@ -112,7 +112,7 @@ ul.navigation li {
   list-style-type:none;
 }
 #primary ul.navigation li {
-  border-right: 1px solid #FFFFFF;
+  border-right: 1px solid #000;
   float: left;
   height: 26px;
   margin: 0;
